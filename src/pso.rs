@@ -1,6 +1,7 @@
 use crate::problema::*;
 use rand::Rng;
 use rand::seq::SliceRandom;
+use crate::hc::*;
 
 fn calcular_fitness(
     posicao: &[f64],
@@ -105,9 +106,7 @@ pub fn solve_pso(problema: &ProblemaEnsopado) -> (Vec<bool>, f64) {
     let mut rng = rand::thread_rng();
     let mut enxame: Vec<Particula> = Vec::with_capacity(num_particulas);
 
-    println!("criando particulas");
     for j in 0..num_particulas {
-        println!("particula {}", j);
         let solucao_valida = gerar_solucao_valida(problema, &mut rng);
 
         let posicao_inicial: Vec<f64> = solucao_valida
@@ -123,19 +122,22 @@ pub fn solve_pso(problema: &ProblemaEnsopado) -> (Vec<bool>, f64) {
         };
         enxame.push(p);
     }
-    println!("criou as particulas");
     let mut melhor_posicao_global = vec![0.0; dimensoes];
     let mut melhor_fitness_global = -f64::INFINITY;
 
-    println!("calculando fitness");
+    let mut count = 0;
     for p in &mut enxame {
         let fitness = calcular_fitness(&p.posicao, problema, limiar_conversao);
         p.melhor_fitness = fitness;
-        p.melhor_posicao = p.posicao.clone();
+        let solucao_binaria_melhorada: Vec<bool> = p.posicao.iter().map(|&pos| pos > limiar_conversao).collect();
+        p.melhor_posicao = gerar_posicao_de_solucao(&solucao_binaria_melhorada, &mut rng);
         if fitness > melhor_fitness_global {
             melhor_fitness_global = fitness;
-            melhor_posicao_global = p.posicao.clone();
+            let solucao_binaria_melhorada: Vec<bool> = p.posicao.iter().map(|&pos| pos > limiar_conversao).collect();
+            melhor_posicao_global = gerar_posicao_de_solucao(&solucao_binaria_melhorada, &mut rng);
         }
+        // println!("Particula {}: {} ", count, fitness);
+        count += 1;
     }
 
     for iter in 0..num_iteracoes {
@@ -162,7 +164,18 @@ pub fn solve_pso(problema: &ProblemaEnsopado) -> (Vec<bool>, f64) {
                 p.posicao[i] = p.posicao[i].max(0.0).min(1.0);
             }
 
-            let fitness_atual = calcular_fitness(&p.posicao, problema, limiar_conversao);
+            let mut fitness_atual = calcular_fitness(&p.posicao, problema, limiar_conversao);
+            if fitness_atual == melhor_fitness_global{
+                let solucao_pso: Vec<bool> = p.posicao.iter().map(|&pos| pos > limiar_conversao).collect();
+
+                let (solucao_final, _) = busca_local_exaustiva(&solucao_pso, problema, limiar_conversao);
+                let posicao: Vec<f64> = solucao_final
+                    .iter()
+                    .map(|&valido| if valido { rng.gen_range(0.7..1.0) } else { rng.gen_range(0.0..0.3) })
+                    .collect();
+                p.posicao = posicao.clone();
+                fitness_atual = calcular_fitness(&p.posicao, problema, limiar_conversao);
+            }
             if fitness_atual > p.melhor_fitness {
                 p.melhor_fitness = fitness_atual;
                 let solucao_binaria_melhorada: Vec<bool> = p.posicao.iter().map(|&pos| pos > limiar_conversao).collect();
