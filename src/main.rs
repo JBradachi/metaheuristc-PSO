@@ -11,12 +11,12 @@ fn visualiza_solucao(sol: Vec<bool>) -> Vec<usize> {
     indices
 }
 fn main() {
-    let mut problema = ProblemaEnsopado::load_from("instances/ep01.dat");
-    println!("ep01");
+    let mut problema = ProblemaEnsopado::load_from("instances/ep10.dat");
+    println!("ep10");
 
     for i in 0..30 {
         let tempo_inicial = std::time::Instant::now();
-        
+
         let (solucao_final, melhor_solucao
             , solucao_inicial, fitness_inicial) 
             = solve_pso(&mut problema);

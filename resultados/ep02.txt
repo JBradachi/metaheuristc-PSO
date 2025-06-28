@@ -1,0 +1,311 @@
+ep02
+ ----------------------- 
+
+                    Iteração 1:
+- Solução inicial 
+[47, 49, 290, 335, 358, 360, 429, 441, 451, 454, 468, 489]
+- Resultado inicial: 970.0
+- Solução final 
+[47, 49, 290, 335, 358, 360, 429, 441, 451, 454, 468, 489]
+- Resultado final: 970.0
+- Tempo: 4.14134509s
+ ----------------------- 
+
+                    Iteração 2:
+- Solução inicial 
+[161, 239, 250, 276, 301, 324, 362, 439, 441, 454, 485, 492]
+- Resultado inicial: 980.0
+- Solução final 
+[161, 239, 250, 276, 301, 324, 362, 439, 441, 454, 485, 492]
+- Resultado final: 980.0
+- Tempo: 4.15561108s
+ ----------------------- 
+
+                    Iteração 3:
+- Solução inicial 
+[9, 148, 197, 234, 289, 318, 336, 350, 360, 444, 451, 464, 484]
+- Resultado inicial: 962.0
+- Solução final 
+[9, 148, 197, 234, 289, 318, 336, 350, 360, 444, 451, 464, 484]
+- Resultado final: 962.0
+- Tempo: 3.976174389s
+Nenhuma melhora encontrada na vizinhança. Busca Local terminada.
+ ----------------------- 
+
+                    Iteração 4:
+- Solução inicial 
+[200, 264, 274, 326, 403, 406, 412, 482, 485, 486, 495]
+- Resultado inicial: 973.0
+- Solução final 
+[200, 264, 274, 326, 403, 406, 412, 482, 485, 486, 495]
+- Resultado final: 973.0
+- Tempo: 3.723210015s
+ ----------------------- 
+
+                    Iteração 5:
+- Solução inicial 
+[48, 98, 124, 128, 200, 265, 327, 331, 352, 411, 434, 450, 462, 497]
+- Resultado inicial: 991.0
+- Solução final 
+[48, 98, 124, 128, 200, 265, 327, 331, 352, 411, 434, 450, 462, 497]
+- Resultado final: 991.0
+- Tempo: 3.649713885s
+ ----------------------- 
+
+                    Iteração 6:
+- Solução inicial 
+[52, 55, 157, 200, 287, 324, 335, 386, 411, 420, 432, 471, 482]
+- Resultado inicial: 956.0
+- Solução final 
+[52, 55, 157, 200, 287, 324, 335, 386, 411, 420, 432, 471, 482]
+- Resultado final: 956.0
+- Tempo: 3.713907884s
+ ----------------------- 
+
+                    Iteração 7:
+- Solução inicial 
+[77, 146, 226, 256, 281, 300, 373, 374, 377, 390, 410, 444, 451, 456]
+- Resultado inicial: 1072.0
+- Solução final 
+[77, 146, 226, 256, 281, 300, 373, 374, 377, 390, 410, 444, 451, 456]
+- Resultado final: 1072.0
+- Tempo: 3.55498697s
+ ----------------------- 
+
+                    Iteração 8:
+- Solução inicial 
+[31, 117, 208, 243, 246, 275, 320, 368, 382, 419, 471, 473, 475, 491]
+- Resultado inicial: 1064.0
+- Solução final 
+[31, 117, 208, 243, 246, 275, 320, 368, 382, 419, 471, 473, 475, 491]
+- Resultado final: 1064.0
+- Tempo: 3.285954052s
+ ----------------------- 
+
+                    Iteração 9:
+- Solução inicial 
+[23, 152, 185, 243, 247, 288, 309, 310, 376, 377, 402, 424, 437, 498]
+- Resultado inicial: 1016.0
+- Solução final 
+[23, 152, 185, 243, 247, 288, 309, 310, 376, 377, 402, 424, 437, 498]
+- Resultado final: 1016.0
+- Tempo: 3.237866155s
+Nenhuma melhora encontrada na vizinhança. Busca Local terminada.
+ ----------------------- 
+
+                    Iteração 10:
+- Solução inicial 
+[39, 140, 179, 197, 202, 243, 366, 377, 406, 416, 469, 471, 497]
+- Resultado inicial: 946.0
+- Solução final 
+[39, 140, 179, 197, 202, 243, 366, 377, 406, 416, 469, 471, 497]
+- Resultado final: 946.0
+- Tempo: 3.406098805s
+ ----------------------- 
+
+                    Iteração 11:
+- Solução inicial 
+[43, 206, 252, 295, 382, 403, 410, 437, 443, 472, 480, 493]
+- Resultado inicial: 997.0
+- Solução final 
+[43, 206, 252, 295, 382, 403, 410, 437, 443, 472, 480, 493]
+- Resultado final: 997.0
+- Tempo: 3.407363883s
+ ----------------------- 
+
+                    Iteração 12:
+- Solução inicial 
+[10, 33, 118, 121, 133, 287, 324, 335, 358, 410, 432, 451, 467, 496]
+- Resultado inicial: 959.0
+- Solução final 
+[10, 33, 118, 121, 133, 287, 324, 335, 358, 410, 432, 451, 467, 496]
+- Resultado final: 959.0
+- Tempo: 3.36075729s
+ ----------------------- 
+
+                    Iteração 13:
+- Solução inicial 
+[19, 51, 54, 99, 328, 331, 348, 349, 403, 431, 441, 449, 478]
+- Resultado inicial: 908.0
+- Solução final 
+[19, 51, 54, 99, 328, 331, 348, 349, 403, 431, 441, 449, 478]
+- Resultado final: 908.0
+- Tempo: 3.675450091s
+Nenhuma melhora encontrada na vizinhança. Busca Local terminada.
+ ----------------------- 
+
+                    Iteração 14:
+- Solução inicial 
+[6, 315, 316, 351, 384, 386, 389, 396, 467, 472, 482, 499]
+- Resultado inicial: 1025.0
+- Solução final 
+[6, 315, 316, 351, 384, 386, 389, 396, 467, 472, 482, 499]
+- Resultado final: 1025.0
+- Tempo: 3.92797263s
+ ----------------------- 
+
+                    Iteração 15:
+- Solução inicial 
+[81, 108, 228, 243, 255, 297, 342, 349, 376, 388, 457, 478, 499]
+- Resultado inicial: 970.0
+- Solução final 
+[81, 108, 228, 243, 255, 297, 342, 349, 376, 388, 457, 478, 499]
+- Resultado final: 970.0
+- Tempo: 3.347082949s
+ ----------------------- 
+
+                    Iteração 16:
+- Solução inicial 
+[190, 193, 215, 273, 314, 343, 372, 409, 419, 453, 475, 489]
+- Resultado inicial: 964.0
+- Solução final 
+[190, 193, 215, 273, 314, 343, 372, 409, 419, 453, 475, 489]
+- Resultado final: 964.0
+- Tempo: 3.66603327s
+ ----------------------- 
+
+                    Iteração 17:
+- Solução inicial 
+[141, 193, 271, 286, 291, 305, 393, 409, 418, 429, 457, 466]
+- Resultado inicial: 949.0
+- Solução final 
+[141, 193, 271, 286, 291, 305, 393, 409, 418, 429, 457, 466]
+- Resultado final: 949.0
+- Tempo: 3.41560836s
+ ----------------------- 
+
+                    Iteração 18:
+- Solução inicial 
+[169, 187, 220, 310, 328, 337, 381, 392, 435, 447, 475, 486]
+- Resultado inicial: 965.0
+- Solução final 
+[169, 187, 220, 310, 328, 337, 381, 392, 435, 447, 475, 486]
+- Resultado final: 965.0
+- Tempo: 3.697741869s
+ ----------------------- 
+
+                    Iteração 19:
+- Solução inicial 
+[18, 67, 92, 123, 189, 200, 335, 349, 396, 411, 430, 435, 441, 442, 447]
+- Resultado inicial: 1044.0
+- Solução final 
+[18, 67, 92, 123, 189, 200, 335, 349, 396, 411, 430, 435, 441, 442, 447]
+- Resultado final: 1044.0
+- Tempo: 3.263723423s
+Nenhuma melhora encontrada na vizinhança. Busca Local terminada.
+ ----------------------- 
+
+                    Iteração 20:
+- Solução inicial 
+[226, 281, 314, 328, 352, 374, 390, 405, 415, 440, 469, 478, 486]
+- Resultado inicial: 1135.0
+- Solução final 
+[226, 281, 314, 328, 352, 374, 390, 405, 415, 440, 469, 478, 486]
+- Resultado final: 1135.0
+- Tempo: 3.721377256s
+ ----------------------- 
+
+                    Iteração 21:
+- Solução inicial 
+[83, 189, 209, 299, 376, 429, 442, 461, 462, 465, 473, 494]
+- Resultado inicial: 1007.0
+- Solução final 
+[83, 189, 209, 299, 376, 429, 442, 461, 462, 465, 473, 494]
+- Resultado final: 1007.0
+- Tempo: 3.763937476s
+Nenhuma melhora encontrada na vizinhança. Busca Local terminada.
+Nenhuma melhora encontrada na vizinhança. Busca Local terminada.
+Nenhuma melhora encontrada na vizinhança. Busca Local terminada.
+ ----------------------- 
+
+                    Iteração 22:
+- Solução inicial 
+[115, 152, 183, 185, 223, 279, 288, 290, 346, 365, 437, 477, 495]
+- Resultado inicial: 916.0
+- Solução final 
+[115, 152, 183, 185, 223, 279, 288, 290, 346, 365, 437, 477, 495]
+- Resultado final: 916.0
+- Tempo: 3.781390521s
+ ----------------------- 
+
+                    Iteração 23:
+- Solução inicial 
+[40, 141, 172, 255, 286, 307, 326, 328, 409, 448, 478, 483, 499]
+- Resultado inicial: 987.0
+- Solução final 
+[40, 141, 172, 255, 286, 307, 326, 328, 409, 448, 478, 483, 499]
+- Resultado final: 987.0
+- Tempo: 3.333289735s
+ ----------------------- 
+
+                    Iteração 24:
+- Solução inicial 
+[130, 159, 171, 267, 297, 326, 349, 381, 422, 470, 481, 488]
+- Resultado inicial: 927.0
+- Solução final 
+[130, 159, 171, 267, 297, 326, 349, 381, 422, 470, 481, 488]
+- Resultado final: 927.0
+- Tempo: 3.795130469s
+ ----------------------- 
+
+                    Iteração 25:
+- Solução inicial 
+[200, 235, 259, 296, 408, 420, 432, 444, 453, 459, 496]
+- Resultado inicial: 944.0
+- Solução final 
+[200, 235, 259, 296, 408, 420, 432, 444, 453, 459, 496]
+- Resultado final: 944.0
+- Tempo: 3.870838709s
+ ----------------------- 
+
+                    Iteração 26:
+- Solução inicial 
+[169, 242, 247, 372, 377, 388, 389, 397, 404, 470, 478, 489]
+- Resultado inicial: 1020.0
+- Solução final 
+[169, 242, 247, 372, 377, 388, 389, 397, 404, 470, 478, 489]
+- Resultado final: 1020.0
+- Tempo: 3.379533727s
+Nenhuma melhora encontrada na vizinhança. Busca Local terminada.
+ ----------------------- 
+
+                    Iteração 27:
+- Solução inicial 
+[103, 122, 128, 221, 235, 303, 369, 402, 407, 450, 457, 475, 480]
+- Resultado inicial: 979.0
+- Solução final 
+[103, 122, 128, 221, 235, 303, 369, 402, 407, 450, 457, 475, 480]
+- Resultado final: 979.0
+- Tempo: 3.787907053s
+Nenhuma melhora encontrada na vizinhança. Busca Local terminada.
+ ----------------------- 
+
+                    Iteração 28:
+- Solução inicial 
+[75, 186, 255, 352, 367, 398, 409, 437, 449, 469, 476, 499]
+- Resultado inicial: 1004.0
+- Solução final 
+[75, 186, 255, 352, 367, 398, 409, 437, 449, 469, 476, 499]
+- Resultado final: 1004.0
+- Tempo: 3.862039486s
+Nenhuma melhora encontrada na vizinhança. Busca Local terminada.
+ ----------------------- 
+
+                    Iteração 29:
+- Solução inicial 
+[38, 190, 203, 210, 244, 297, 312, 346, 349, 422, 491, 492, 493]
+- Resultado inicial: 965.0
+- Solução final 
+[38, 190, 203, 210, 244, 297, 312, 346, 349, 422, 491, 492, 493]
+- Resultado final: 965.0
+- Tempo: 3.473870255s
+ ----------------------- 
+
+                    Iteração 30:
+- Solução inicial 
+[127, 183, 296, 318, 321, 365, 418, 439, 481, 487, 488]
+- Resultado inicial: 910.0
+- Solução final 
+[127, 183, 296, 318, 321, 365, 418, 439, 481, 487, 488]
+- Resultado final: 910.0
+- Tempo: 3.380410479s
