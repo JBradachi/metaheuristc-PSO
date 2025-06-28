@@ -87,7 +87,7 @@ impl ProblemaEnsopado {
 
         // Próximas I linhas: pares j,k de incompatibilidades
         lines.next(); // linha em branco
-        for x in 0..num_incompat {
+        for _ in 0..num_incompat {
             let line = lines.next().unwrap().unwrap();
             let pair = read_floats(&line);
             let j = pair[0] as usize - 1;

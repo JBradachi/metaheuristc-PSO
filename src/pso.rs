@@ -88,7 +88,7 @@ fn gerar_posicao_de_solucao(solucao: &[bool], rng: &mut impl Rng) -> Vec<f64> {
         .collect()
 }
 
-pub fn solve_pso(problema: &ProblemaEnsopado) -> (Vec<bool>, f64) {
+pub fn solve_pso(problema: &ProblemaEnsopado) -> (Vec<bool>, f64, Vec<bool>, f64) {
     // --- Parâmetros do PSO ---
     let num_particulas = 100;
     let num_iteracoes = 50;
@@ -99,6 +99,9 @@ pub fn solve_pso(problema: &ProblemaEnsopado) -> (Vec<bool>, f64) {
     let c1 = 2.0;
     let c2 = 2.0;
     let v_max = 1.0;
+    let mut sol_inicial = Particula{
+                ..Default::default()
+            };
 
     let mut iteracoes_sem_melhora = 0;
     const LIMITE_ESTAGNACAO: usize = 15;
@@ -106,7 +109,7 @@ pub fn solve_pso(problema: &ProblemaEnsopado) -> (Vec<bool>, f64) {
     let mut rng = rand::thread_rng();
     let mut enxame: Vec<Particula> = Vec::with_capacity(num_particulas);
 
-    for j in 0..num_particulas {
+    for _ in 0..num_particulas {
         let solucao_valida = gerar_solucao_valida(problema, &mut rng);
 
         let posicao_inicial: Vec<f64> = solucao_valida
@@ -125,7 +128,6 @@ pub fn solve_pso(problema: &ProblemaEnsopado) -> (Vec<bool>, f64) {
     let mut melhor_posicao_global = vec![0.0; dimensoes];
     let mut melhor_fitness_global = -f64::INFINITY;
 
-    let mut count = 0;
     for p in &mut enxame {
         let fitness = calcular_fitness(&p.posicao, problema, limiar_conversao);
         p.melhor_fitness = fitness;
@@ -135,9 +137,12 @@ pub fn solve_pso(problema: &ProblemaEnsopado) -> (Vec<bool>, f64) {
             melhor_fitness_global = fitness;
             let solucao_binaria_melhorada: Vec<bool> = p.posicao.iter().map(|&pos| pos > limiar_conversao).collect();
             melhor_posicao_global = gerar_posicao_de_solucao(&solucao_binaria_melhorada, &mut rng);
+            sol_inicial.melhor_fitness = fitness;
+            sol_inicial.melhor_posicao = melhor_posicao_global.clone();
+            sol_inicial.posicao = melhor_posicao_global.clone();
+            sol_inicial.velocidade = p.velocidade.clone();
+
         }
-        // println!("Particula {}: {} ", count, fitness);
-        count += 1;
     }
 
     for iter in 0..num_iteracoes {
@@ -188,10 +193,10 @@ pub fn solve_pso(problema: &ProblemaEnsopado) -> (Vec<bool>, f64) {
                 melhor_posicao_global = gerar_posicao_de_solucao(&solucao_binaria_melhorada, &mut rng);
             }
         }
-        println!(
-            "Iteração {}: Melhor Fitness Global = {:.2}",
-            iter, melhor_fitness_global
-        );
+        // println!(
+        //     "Iteração {}: Melhor Fitness Global = {:.2}",
+        //     iter, melhor_fitness_global
+        // );
         if melhor_fitness_global > gbest_anterior {
             iteracoes_sem_melhora = 0;
         } else {
@@ -229,9 +234,10 @@ pub fn solve_pso(problema: &ProblemaEnsopado) -> (Vec<bool>, f64) {
                 sabor_final += problema.ingredientes[i].sabor;
             }
         }
-        (solucao_final_binaria, sabor_final)
+        let solucao_inicial_binaria : Vec<bool> = sol_inicial.melhor_posicao.iter().map(|&p| p > limiar_conversao).collect();
+        (solucao_final_binaria, sabor_final, solucao_inicial_binaria, sol_inicial.melhor_fitness)
     } else {
         // Se, por algum motivo, a melhor solução ainda for inválida, retorne nulo.
-        (vec![false; dimensoes], 0.0)
+        (vec![false; dimensoes], 0.0, vec![false; dimensoes], 0.0)
     }
 }

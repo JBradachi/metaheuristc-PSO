@@ -9,9 +9,6 @@ pub fn busca_local_exaustiva(
     // A posição contínua não importa aqui, só o fitness da solução binária
     let mut fitness_atual = calcular_fitness_binario(&solucao_atual, problema);
     
-    println!("\n--- A Iniciar Busca Local Intensiva ---");
-    println!("Fitness de partida: {:.2}", fitness_atual);
-
     loop {
         let mut melhor_vizinho = solucao_atual.clone();
         let mut melhor_fitness_vizinho = fitness_atual;
